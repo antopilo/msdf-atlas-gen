@@ -238,20 +238,6 @@ static bool makeAtlas(const std::vector<GlyphGeometry> &glyphs, const std::vecto
         }
     }
 
-    if (config.arteryFontFilename) {
-        ArteryFontExportProperties arfontProps;
-        arfontProps.fontSize = config.emSize;
-        arfontProps.pxRange = config.pxRange;
-        arfontProps.imageType = config.imageType;
-        arfontProps.imageFormat = config.imageFormat;
-        arfontProps.yDirection = config.yDirection;
-        if (exportArteryFont<float>(fonts.data(), fonts.size(), bitmap, config.arteryFontFilename, arfontProps))
-            puts("Artery Font file generated.");
-        else {
-            success = false;
-            puts("Failed to generate Artery Font file.");
-        }
-    }
 
     return success;
 }
