@@ -47,6 +47,6 @@ set_target_properties(freetype PROPERTIES FOLDER "MSDF")
 
 target_compile_features(msdf-atlas-gen PUBLIC cxx_std_11)
 
-target_link_libraries(msdf-atlas-gen PUBLIC Threads::Threads msdfgen)
+target_link_libraries(msdf-atlas-gen PUBLIC Threads::Threads msdfgen-core)
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT msdf-atlas-gen)
 
